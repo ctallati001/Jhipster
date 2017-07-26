@@ -85,7 +85,7 @@ public class CustomAuditEventRepositoryIntTest {
         AuditEvent event = events.get(0);
         assertThat(event.getPrincipal()).isEqualTo(testUserEvent.getPrincipal());
         assertThat(event.getType()).isEqualTo(testUserEvent.getAuditEventType());
-        assertThat(event.getData()).containsKey("test-key");
+        assertThat(event.getData()).containsKey("1234");
         assertThat(event.getData().get("test-key").toString()).isEqualTo("test-value");
         assertThat(event.getTimestamp()).isEqualTo(Date.from(testUserEvent.getAuditEventDate()));
     }
